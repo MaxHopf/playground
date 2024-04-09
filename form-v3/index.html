@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Website description to be changed" />
+    <title>Descriptive Title to be changed</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <section>
+        <h1>Write your comment!</h1>
+        <form class="form">
+
+            <div class="input">
+                <input id="name" placeholder="Name *" name="name" type="text" value="" pattern="^[^0-9]+$" size="30"
+                    maxlength="245" autofocus required>
+                <label class="small-text" for="name">Name</label>
+            </div>
+            <div class="input">
+                <input id="surname" placeholder="Surname (optional)" name="surname" type="text" value="" size="30"
+                    maxlength="245" required>
+                <label class="small-text" for="surname">Surname</label>
+            </div>
+            <div class="input">
+                <input id="email" placeholder="Email *" name="email" type="email" value="" size="30" maxlength="100"
+                    aria-describedby="email-notes" required>
+                <label class="small-text" for="email">Email</label>
+            </div>
+            <div class="input">
+                <input id="url" placeholder="Website (optional)" name="url" type="url" value="" size="30"
+                    maxlength="200">
+                <label class="small-text" for="url">Website</label>
+            </div>
+            <div class="input">
+                <textarea textarea="" placeholder="Comment *" id="comment" name="comment" cols="45" rows="8"
+                    maxlength="65525" required></textarea>
+                <label class="small-text" for="comment">Comment</label>
+            </div>
+        </form>
+    </section>
+
+    <section class="center">
+
+        <div class="headline margin-bottom-L">
+            <h2>Sign Up</h2>
+            <p>Welcome to our fake Service, where you can test our fake sign up form.</p>
+        </div>
+
+        <form class="form" action="" method="post">
+
+            <div class="input input-hasIconLeft">
+                <input type="text" name="user_name" id="user-name" placeholder="Name *" minlength="1" maxlength="128"
+                    pattern="^[a-zA-Z][\-a-zA-Z0-9_\.]{1,20}$" autofocus required>
+                <label class="small-text" for="user-name">Name</label>
+                <span class="input-iconLeft"></span>
+            </div>
+
+            <div class="input input-hasIconLeft">
+                <input type="email" name="user_email" id="user-email" placeholder="Email *" minlength="1"
+                    maxlength="128" required>
+                <label class="small-text" for="user-email">Email</label>
+                <span class="input-iconLeft"></span>
+            </div>
+
+            <div class="input input-hasIconLeft">
+                <input type="password" name="user_password" id="user-password" placeholder="Password *" minlength="1"
+                    maxlength="128" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                    required>
+                <label class="small-text" for="user-password">Password</label>
+                <span class="input-iconLeft"></span>
+            </div>
+
+            <div class="button button-primary margin-top-M">
+                <button type="submit">Sign Up</button>
+            </div>
+
+            <p class="login-link">Already have an account? <a class="button-tertiary">Log In</a></p>
+
+            <div class="divider margin-top-M"><span>or</span></div>
+
+            <div class="button button-secondary">
+                <button type="button" class="button-google">
+                    <div class="button-icon"></div>
+                    <div>Sign up with Google</div>
+                </button>
+            </div>
+
+            <p class="small-text margin-top-L">By signing up to create an account I accept Company's <a
+                    class="button-tertiary">Terms of Use and Privacy Policy.</a></p>
+
+        </form>
+    </section>
+
+</body>
+
+</html>

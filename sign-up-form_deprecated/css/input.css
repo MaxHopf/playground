@@ -1,0 +1,113 @@
+:root {
+    --input-background-color: var(--section-background-color);
+    --input-color: hsla(0, 0%, 0%, 0.87);
+    --input-label-color: hsla(0, 0%, 20%, 0.7);
+    --input-border-color: hsla(0, 0%, 20%, 0.702);
+    --focus-input-border-color: blue;
+    --invalid-input-color: #DC3545;
+    --valid-input-color: #198754;
+
+    --icon-checkmark-circle: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="green" class="ionicon" viewBox="0 0 512 512"><path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm108.25 138.29l-134.4 160a16 16 0 01-12 5.71h-.27a16 16 0 01-11.89-5.3l-57.6-64a16 16 0 1123.78-21.4l45.29 50.32 122.59-145.91a16 16 0 0124.5 20.58z"/></svg>');
+    --icon-alert-circle: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="red" class="ionicon" viewBox="0 0 512 512"><path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm0 319.91a20 20 0 1120-20 20 20 0 01-20 20zm21.72-201.15l-5.74 122a16 16 0 01-32 0l-5.74-121.94v-.05a21.74 21.74 0 1143.44 0z"/></svg>');
+    --icon-user: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>');
+    --icon-at-sign: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-at-sign"><circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path></svg>');
+    --icon-lock: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>');
+}
+
+.input {
+    position: relative;
+}
+
+.input input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    padding-left: 2.75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--input-color);
+    margin-bottom: 1rem;
+    border: 2px solid var(--input-border-color);
+    border-radius: 0.5rem;
+    outline: none;
+    cursor: text;
+    background: var(--input-background-color);
+}
+
+.input-icon-left {
+    position: absolute;
+    background-size: 1.25rem 1.25rem;
+    background-repeat: no-repeat;
+    height: 1.25rem;
+    width: 1.25rem;
+    top: 1rem;
+    left: 1rem;
+}
+
+#user-name~.input-icon-left {
+    background-image: var(--icon-user);
+}
+
+#user-email~.input-icon-left {
+    background-image: var(--icon-at-sign);
+}
+
+#user-password~.input-icon-left {
+    background-image: var(--icon-lock);
+}
+
+.input label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.75rem 1rem;
+    padding-left: 2.75rem;
+    font-size: 1rem;
+    color: var(--input-label-color);
+    pointer-events: none;
+    transition: 600ms;
+}
+
+.input input:focus {
+    outline: none;
+    border-color: var(--focus-input-border-color);
+    background-color: var(--input-background-color);
+}
+
+.input input:focus+label {
+    color: var(--focus-input-border-color);
+}
+
+.input input:not(:placeholder-shown)~label,
+.input input:focus~label {
+    border-color: var(--valid-input-color);
+    top: -12px;
+    left: 1rem;
+    font-size: 0.875rem;
+    padding: 0 4px;
+    line-height: 20px;
+    background-color: var(--section-background-color);
+}
+
+.input input:not(:focus):not(:placeholder-shown):valid {
+    border-color: var(--valid-input-color);
+    background-image: var(--icon-checkmark-circle);
+    background-size: 1.75rem 1.75rem;
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+}
+
+.input input:not(:focus):not(:placeholder-shown):valid~label {
+    color: var(--valid-input-color);
+}
+
+.input input:not(:focus):not(:placeholder-shown):invalid {
+    border-color: red;
+    background-image: var(--icon-alert-circle);
+    background-size: 1.75rem 1.75rem;
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+}
+
+.input input:not(:focus):not(:placeholder-shown):invalid+label {
+    color: red;
+}

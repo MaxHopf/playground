@@ -1,0 +1,19 @@
+.divider {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.divider::before,
+.divider::after {
+    flex: 1;
+    content: '';
+    padding: 0.5px;
+    background-color: var(--default-text-color);
+    opacity: 70%;
+    margin: 0.25rem;
+}
+
+.divider>span {
+    margin: 0.5rem 1rem;
+}

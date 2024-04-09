@@ -1,0 +1,26 @@
+@import url(css/reset.css);
+@import url(css/typography.css);
+@import url(css/button.css);
+@import url(css/divider.css);
+@import url(css/layout.css);
+@import url(css/input.css);
+
+
+body {
+    background-color: aliceblue;
+}
+
+section {
+    max-width: 30rem;
+    margin: 1rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: .75rem;
+    line-height: 1.6;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    position: relative;
+    font-size: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+    display: block;
+}

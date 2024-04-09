@@ -1,0 +1,61 @@
+/*Buttons*/
+
+:root {
+    --primary-button-background-color: hsla(219, 32%, 30%, 1);
+    --primary-button-text-color: hsla(0, 0%, 98%, 1);
+    --secondary-button-border-color: hsla(219, 32%, 30%, 1);
+    --secondary-button-text-color: hsla(219, 32%, 30%, 1);
+    --tertiary-link-text-color: hsl(219, 62%, 32%);
+}
+
+.button button {
+    font-weight: bold;
+    width: 100%;
+    line-height: 1.5rem;
+    padding: 0.75rem 0;
+    border: 2px solid hsla(191, 82%, 36%, 0);
+    border-radius: 0.5rem;
+    background-color: var(--primary-button-background-color);
+    box-shadow: 0px 4px 32px 8px hsla(219, 32%, 30%, 0.10);
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.button button:hover {
+    filter: brightness(120%);
+    cursor: pointer;
+}
+
+.button-primary>button {
+    background-color: var(--primary-button-background-color);
+    color: var(--primary-button-text-color);
+}
+
+.button-secondary>button {
+    background-color: transparent;
+    border: 2px solid var(--secondary-button-border-color);
+    color: hsla(219, 32%, 30%, 1);
+    box-shadow: none;
+}
+
+.button-google>.button-icon {
+    background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.501 12.2332C22.501 11.3699 22.4296 10.7399 22.2748 10.0865H12.2153V13.9832H18.12C18.001 14.9515 17.3582 16.4099 15.9296 17.3898L15.9096 17.5203L19.0902 19.935L19.3106 19.9565C21.3343 18.1249 22.501 15.4298 22.501 12.2332" fill="%234285F4"/><path d="M12.214 22.5C15.1068 22.5 17.5353 21.5666 19.3092 19.9567L15.9282 17.3899C15.0235 18.0083 13.8092 18.4399 12.214 18.4399C9.38069 18.4399 6.97596 16.6083 6.11874 14.0766L5.99309 14.0871L2.68583 16.5954L2.64258 16.7132C4.40446 20.1433 8.0235 22.5 12.214 22.5Z" fill="%2334A853"/><path d="M6.12046 14.0767C5.89428 13.4234 5.76337 12.7233 5.76337 12C5.76337 11.2767 5.89428 10.5767 6.10856 9.92337L6.10257 9.78423L2.75386 7.2356L2.64429 7.28667C1.91814 8.71002 1.50146 10.3084 1.50146 12C1.50146 13.6917 1.91814 15.29 2.64429 16.7133L6.12046 14.0767" fill="%23FBBC05"/><path d="M12.2141 5.55997C14.2259 5.55997 15.583 6.41163 16.3569 7.12335L19.3807 4.23C17.5236 2.53834 15.1069 1.5 12.2141 1.5C8.02353 1.5 4.40447 3.85665 2.64258 7.28662L6.10686 9.92332C6.97598 7.39166 9.38073 5.55997 12.2141 5.55997" fill="%23EB4335"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 1.5rem 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.button-tertiary {
+    color: hsl(227, 76%, 34%);
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button-tertiary:hover {
+    filter: brightness(150%);
+}
